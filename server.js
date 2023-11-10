@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -11,15 +10,13 @@ const mongoUsername = process.env.MONGO_INITDB_ROOT_USERNAME || 'zumra';
 const mongoPassword = process.env.MONGO_INITDB_ROOT_PASSWORD || 'zumra123';
 const mongoHost = process.env.MONGO_HOST || 'mongodbc';
 const mongoPort = process.env.MONGO_PORT || '27017';
-// const mongoURI = `mongodb://${mongoUsername}:${mongoPassword}@${mongoHost}:${mongoPort}`;
-// const mongoURI = `mongodb://localhost:${mongoPort}`;
-const mongoURI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.9avuj.mongodb.net/?retryWrites=true&w=majority`;
-console.log(mongoURI)
+const mongoURI =  `mongodb://${mongoUsername}:${mongoPassword}@${mongoHost}:${mongoPort}`;
+
 app.use(bodyParser.json());
 app.use('/api',userRoute);
 app.use('/api',convertRoute);
 
-mongoose.connect(mongoURI).then((r) => {
+mongoose.connect(mongoURI).then(() => {
   console.log('Connected to MongoDB successfully');
 }).catch((error) => {
   console.error('Error connecting to MongoDB:', error.message);
