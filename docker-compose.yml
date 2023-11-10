@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  # MongoDB service
+  mongodbc:
+    image: mongo
+    container_name: mongodbc
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: zumra
+      MONGO_INITDB_ROOT_PASSWORD: zumra123
+
+  # Node.js/Express app service
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongodbc
+    environment:
+      MONGO_URI: mongodb://zumra:zumra123@mongodbc:27017
