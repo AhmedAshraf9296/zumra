@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "095397fe-6848-4a3d-b4f8-048668ec8e19",
+		"name": "zumra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10662788",
+		"_collection_link": "https://planetary-water-619909.postman.co/workspace/Einvoice~3d947ecf-c8cf-48b8-8b4e-d9d7937525fb/collection/10662788-095397fe-6848-4a3d-b4f8-048668ec8e19?action=share&source=collection_link&creator=10662788"
+	},
+	"item": [
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "Register Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"ashraf\",\"password\":\"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"ashraf\",\"password\":\"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRlNmMzZTJhZTMzNzliNjZmNDVkYzkiLCJpYXQiOjE2OTk2MzgzMzcsImV4cCI6MTY5OTY0MTkzN30.Rr7ttQWNaFUmFjygVDtlKlQmsbdLXqNX-DVcJV2_4w4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRlNmMzZTJhZTMzNzliNjZmNDVkYzkiLCJpYXQiOjE2OTk2NDEwMzMsImV4cCI6MTY5OTY0NDYzM30.Qn7LtboJ7IIXjBzau_5y4NmZgI1AzxIsLegLI_KmjJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sourceCurrency\":\"EUR\",\n\"targetCurrency\":\"EGP\",\n\"amount\":10 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/convert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deployed",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"ashraf\",\"password\":\"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zumra.onrender.com/api/user/register",
+							"protocol": "https",
+							"host": [
+								"zumra",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"ashraf\",\"password\":\"123456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zumra.onrender.com/api/user/login",
+							"protocol": "https",
+							"host": [
+								"zumra",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRlNmMzZTJhZTMzNzliNjZmNDVkYzkiLCJpYXQiOjE2OTk2MzgzMzcsImV4cCI6MTY5OTY0MTkzN30.Rr7ttQWNaFUmFjygVDtlKlQmsbdLXqNX-DVcJV2_4w4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zumra.onrender.com/api/user/history",
+							"protocol": "https",
+							"host": [
+								"zumra",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRlNmMzZTJhZTMzNzliNjZmNDVkYzkiLCJpYXQiOjE2OTk2NDEwMzMsImV4cCI6MTY5OTY0NDYzM30.Qn7LtboJ7IIXjBzau_5y4NmZgI1AzxIsLegLI_KmjJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"sourceCurrency\":\"EUR\",\n\"targetCurrency\":\"EGP\",\n\"amount\":10 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://zumra.onrender.com/api/convert",
+							"protocol": "https",
+							"host": [
+								"zumra",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"convert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
